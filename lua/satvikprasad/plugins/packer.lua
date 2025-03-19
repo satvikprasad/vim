@@ -1,15 +1,34 @@
 require("packer").startup(function(use)
+    use {
+        'othree/html5.vim',
+        requires = { 'pangloss/vim-javascript', 'evanleck/vim-svelte' }
+    }
+
+    use 'junegunn/fzf.vim'
+    use 'junegunn/fzf'
+
+    use 'Mofiqul/vscode.nvim'
+
+    use 'EdenEast/nightfox.nvim'
+
+    use 'leafgarland/typescript-vim'
+    use 'peitalin/vim-jsx-typescript'
+
+    use 'bkad/CamelCaseMotion'
+
+    use 'maxmx03/solarized.nvim'
+
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+    use 'ellisonleao/gruvbox.nvim'
+
+    use 'savq/melange-nvim'
 
     use 'water-sucks/darkrose.nvim'
 
     use 'github/copilot.vim'
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
 
     use "rhysd/vim-clang-format"
 

@@ -1,16 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
--- Rust fmt
-vim.api.nvim_create_autocmd("BufWritePre", {
-    group = vim.api.nvim_create_augroup("rust-format", { clear = true }),
-    callback = function()
-        if vim.bo.filetype == 'rust' then
-            vim.cmd([[%! rustfmt]])
-        end
-    end,
-})
-
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = vim.api.nvim_create_augroup("go-format", { clear = false }),
     callback = function()
@@ -19,9 +9,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         end
     end,
 })
-
--- COLORSCHEME
-vim.cmd([[colorscheme darkrose]])
 
 -- Disable annoying match brackets and all the jaz
 vim.cmd([[
@@ -32,6 +19,7 @@ augroup END
 ]])
 
 vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "<leader>p", ':Files<CR>')
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4

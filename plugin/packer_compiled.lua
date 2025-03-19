@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
+local package_path_str = "/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/satvikprasad/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  CamelCaseMotion = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/CamelCaseMotion",
+    url = "https://github.com/bkad/CamelCaseMotion"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -119,6 +124,26 @@ _G.packer_plugins = {
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  fzf = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["html5.vim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/html5.vim",
+    url = "https://github.com/othree/html5.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -138,6 +163,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -170,30 +205,50 @@ _G.packer_plugins = {
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["telescope.nvim"] = {
+  ["solarized.nvim"] = {
     loaded = true,
-    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/solarized.nvim",
+    url = "https://github.com/maxmx03/solarized.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
   ["vim-clang-format"] = {
     loaded = true,
     path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/vim-clang-format",
     url = "https://github.com/rhysd/vim-clang-format"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-jsx-typescript"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/vim-jsx-typescript",
+    url = "https://github.com/peitalin/vim-jsx-typescript"
+  },
+  ["vim-svelte"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/vim-svelte",
+    url = "https://github.com/evanleck/vim-svelte"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/Users/satvikprasad/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
